@@ -1,0 +1,142 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html {
+    background-color:#000032;
+}
+
+body {
+    margin:0;
+    height: 100vw;
+    background-color:#000032;
+}
+
+.container {
+    z-index: 1;
+    background-color:#000032;
+    /*grid-template-rows: 90% 150px 120px;*/
+}
+
+.blend-in {
+    background-color:#000032;
+}
+
+.header-space {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0%;
+    right: 0%;
+    margin-top: 55%;
+    margin-bottom: 10%;
+}
+
+.skyImage{
+    left:0;
+    top:0;
+    position:absolute;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    z-index:-3;
+    width:100%;
+    background-size: 100% 100%;
+}
+  
+.sunImage{
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+}
+  
+.cityImage{
+    position:absolute;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    z-index:-1;
+    top:40%;
+    left:0;
+    width:100%;
+}
+  
+.link {
+    position: absolute;
+    margin-left: 20px;
+    margin-top:20px;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.skills-pills {
+    font-size: 1.125rem;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.pills-adjust{
+    margin-top:10px;
+}
+
+.title-adjust{
+    margin-top:20px;
+}
+
+.title-styling{
+    color: whitesmoke;
+}
+
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .card-space {
+      margin-top: 100px;
+  }
+
+  .card-space-half {
+      margin-top: 50px;
+  }
+
+  .slide-image {
+      width: 75%;
+  }
+
+  .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
