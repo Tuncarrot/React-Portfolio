@@ -1,10 +1,10 @@
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = () => {
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
+    document.getElementById("navbarHide").style.top = "0";
   } else {
-    document.getElementById("navbar").style.top = "-50px";
+    document.getElementById("navbarHide").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
 }
