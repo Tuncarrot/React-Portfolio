@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Stylesheets/styling.css';
-import '../Javascript/effects.js'
 
 const UpdateText = (props) => {
     return (
