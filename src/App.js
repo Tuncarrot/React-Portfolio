@@ -3,7 +3,7 @@ import './App.css';
 import './Stylesheets/styling.css'
 import Navbar from './Components/Navbar';
 import UpdateText from './Components/UpdateText';
-import Card from './Components/Card';
+import Infocard from './Components/Infocard';
 import Skills from './Components/Skills';
 
 const App = props => {
@@ -17,75 +17,57 @@ const App = props => {
   const [ infoState ] = useState({
     updateDate: [
       { message: "Updated on March 21st"}
-    ] 
+    ],
+    aboutMe: [
+      { title: "About Me", content: "Hi there! My name is Adam Tunkiewicz "+
+      "and I'm a software engineering student. I enjoy making projects that involve "+
+      "my personal interests and improve my lifestyle. Currently this website under "+
+      "construction as different projects are being updated and added."}
+    ]
   });
 
   return (
     <div className="App">
+
       <Navbar />
 
       <div className="header-space">
         <div className="card text-center blend-in">
-            <div className="card-body">
-                <h2 className="title-styling card-space-half">About Me</h2>
-                <div className="row justify-content-center">
-                    <div className="card mb-3 blend-in card-space" style={{maxWidth: '75%'}}>
-                        <div className="row no-gutters">
-                          <div className="col-md-4">
-                            <img src={require("./Images/me.jpg")} className="card-img" alt="Picture of Me"/>
-                          </div>
-                          <div className="col-md-8">
-                                <div className="card-body border-primary">
+          <div className="card-body">
+            <h2 className="title-styling card-space-half">About Me</h2>
+              <div className="row justify-content-center">
+                <div className="card mb-3 blend-in card-space" style={{maxWidth: '75%'}}>
+                  <div className="row no-gutters">
+                    <div className="col-md-4">
+                      <img src={require("./Images/me.jpg")} className="card-img" alt="Picture of Me"/>
+                    </div>
+                    <div className="col-md-8">
+                          <div className="card-body border-primary">
 
-                                    <div className="row justify-content-center title-styling">
-                                        <h5>Programming Languages</h5>
-                                    </div>
-                                    <div className="row justify-content-center">
-                                        <span className="badge badge-pill badge-primary skills-pills">C</span>
-                                        <span className="badge badge-pill badge-primary skills-pills">C++</span>
-                                        <span className="badge badge-pill badge-primary skills-pills">C#</span>
-                                        <span className="badge badge-pill badge-primary skills-pills">Ruby</span>
-                                    </div>
-                                    <div className="row justify-content-center title-adjust title-styling">
-                                        <h5>Web Languages and Frameworks</h5>
-                                    </div>
-                                    <div className="row justify-content-center">
-                                        <span className="badge badge-pill badge-danger skills-pills">HTML</span>
-                                        <span className="badge badge-pill badge-danger skills-pills">CSS</span>
-                                        <span className="badge badge-pill badge-danger skills-pills">Javascript</span>
-                                    </div>
-                                    <div className="row justify-content-center pills-adjust">
-                                        <span className="badge badge-pill badge-danger skills-pills">Ruby on Rails</span>
-                                        <span className="badge badge-pill badge-danger skills-pills">Angular</span>
-                                        <span className="badge badge-pill badge-danger skills-pills">Bootstrap</span>
-                                    </div>
-                                    <div className="row justify-content-center title-adjust title-styling">
-                                        <h5>Interests and Hobbies</h5>
-                                    </div>
-                                    <div className="row justify-content-center">
-                                        <span className="badge badge-pill badge-warning skills-pills">&#129354;</span>
-                                        <span className="badge badge-pill badge-warning skills-pills">&#127929;</span>
-                                        <span className="badge badge-pill badge-warning skills-pills">&#127843;</span>
-                                        <span className="badge badge-pill badge-warning skills-pills">&#127958;</span>
-                                        <span className="badge badge-pill badge-warning skills-pills">&#128123;</span>
-                                    </div>
-                                    
-                                </div>  
-                          </div>
-                        </div>
-                      </div>
+                              <Skills title="Programming Languages" list={["C","C++","C#"]}/>
 
-                    <div id="intro"></div>
+                              <Skills title="Web Languages and Frameworks" list={["HTML","CSS","Javascript","Ruby on Rails","React","Bootstrap"]}/>
+
+                              <Skills title="Interests and Hobbies" list={["&#129354;","&#127929;","&#127843;","&#127958;","&#128123;"]}/>
+
+                          </div>  
+                    </div>
+                  </div>
+                </div>
+
+                  <Infocard title="About Me" content="Hi there! My name is Adam Tunkiewicz
+                  and I'm a software engineering student. I enjoy making projects that involve
+                  my personal interests and improve my lifestyle. Currently this website under
+                  construction as different projects are being updated and added." />
 
                 </div>
-            </div>
+              </div>
             
-            <UpdateText message={infoState.updateDate.message}/>
+              <UpdateText message="Updated on March 21st" />
 
+            </div>
+          </div>
         </div>
-    </div>
-
-    </div>
   );
 }
 
