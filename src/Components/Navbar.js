@@ -2,7 +2,7 @@ import React from 'react';
 import '../Stylesheets/styling.css';
 import '../Javascript/effects.js'
 
-const  Navbar = (props) => {
+const Navbar = (props) => {
     return (
         <div className="fixed-top navbar" id="navbarHide">
             <a href="./index.html">About Me</a>
